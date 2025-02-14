@@ -15,32 +15,9 @@ export default function HomeScreen() {
           style={styles.reactLogo}
         />
       }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
+       <ThemedView style={styles.titleContainer}>
+        <ThemedText type="title">Jose Ulices Perez Jr.</ThemedText>
         <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">My Name Is Jose Ulices Perez Jr.</ThemedText>
-        <View style={styles.container}>
-      <ThemedText style={styles.heading}>Jose Ulices Perez Jr.</ThemedText>
-      <ThemedText style={styles.subheading}>Full-Stack Web Developer</ThemedText>
-
-      <ThemedText style={styles.paragraph}>
-        <ThemedText style={styles.bold}>Background:</ThemedText> After spending a decade as an educator working with special needs students, I made the leap into tech to pursue my passion for problem-solving and user experience. My background in education has given me a strong foundation in communication, adaptability, and breaking down complex concepts into intuitive solutions.
-      </ThemedText>
-      
-      <ThemedText style={styles.paragraph}>
-        <ThemedText style={styles.bold}>Tech Stack:</ThemedText> React Native, Expo, Tailwind, Supabase, Node.js. I have a keen interest in working with Grindr's tech stack to create seamless and inclusive digital experiences.
-      </ThemedText>
-      
-      <ThemedText style={styles.paragraph}>
-        <ThemedText style={styles.bold}>Strengths:</ThemedText> I focus on efficiency for both users and developers, designing intuitive applications that remove friction and help people connect effortlessly.
-      </ThemedText>
-      
-      <ThemedText style={styles.paragraph}>
-        <ThemedText style={styles.bold}>Hobbies & Interests:</ThemedText> Hiking at Hart Park, playing Marvel Rivals, jamming to Arctic Monkeys, cooking, watching movies (Wicked is my current favorite), and playing the saxophone.
-      </ThemedText>
-    </View>
       </ThemedView>
       <View style={styles.linksContainer}>
         <View style={styles.gridRow}>
@@ -68,6 +45,30 @@ export default function HomeScreen() {
           </TouchableOpacity>
         </View>
       </View>
+      <ThemedView style={styles.stepContainer}>
+        <View style={styles.container}>
+
+          <View style={styles.interviewContainer}>
+            <ThemedText style={styles.question}>Can you tell me a little about your <ThemedText style={styles.bold}>Background</ThemedText>?</ThemedText>
+            <ThemedText style={styles.answer}>Absolutely! After spending a decade as an <ThemedText style={styles.bold}>educator</ThemedText> working with special needs students, I made the leap into tech to pursue my passion for <ThemedText style={styles.bold}>problem-solving</ThemedText> and <ThemedText style={styles.bold}>user experience</ThemedText>. My <ThemedText style={styles.bold}>background in education</ThemedText> has given me a strong foundation in <ThemedText style={styles.bold}>communication</ThemedText>, <ThemedText style={styles.bold}>adaptability</ThemedText>, and breaking down complex concepts into intuitive solutions.</ThemedText>
+          </View>
+
+          <View style={styles.interviewContainer}>
+            <ThemedText style={styles.question}>What technologies do you work with?</ThemedText>
+            <ThemedText style={styles.answer}>I specialize in React Native, Expo, Tailwind, Supabase, and Node.js. My goal is to create seamless digital experiences that prioritize efficiency and accessibility.</ThemedText>
+          </View>
+
+          <View style={styles.interviewContainer}>
+            <ThemedText style={styles.question}>What are your strengths as a developer?</ThemedText>
+            <ThemedText style={styles.answer}>I focus on efficiency for both users and developers, designing intuitive applications that remove friction and help people connect effortlessly.</ThemedText>
+          </View>
+
+          <View style={styles.interviewContainer}>
+            <ThemedText style={styles.question}>What do you enjoy doing outside of coding?</ThemedText>
+            <ThemedText style={styles.answer}>I love hiking at Hart Park, playing Marvel Rivals, jamming to Arctic Monkeys, cooking, watching movies (Wicked is my current favorite), and playing the saxophone.</ThemedText>
+          </View>
+        </View>
+      </ThemedView>
     </ParallaxScrollView>
   );
 }
@@ -89,14 +90,28 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     marginBottom: 20,
   },
+  interviewContainer: {
+    marginTop: 20,
+  },
+  question: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: 10,
+  },
+  answer: {
+    fontSize: 16,
+    lineHeight: 24,
+    textAlign: 'left',
+  },
+  bold: {
+    fontWeight: 'bold',
+  },
   paragraph: {
     fontSize: 16,
     lineHeight: 24,
     marginBottom: 10,
     textAlign: 'left',
-  },
-  bold: {
-    fontWeight: 'bold',
   },
   titleContainer: {
     flexDirection: 'row',
